@@ -2,32 +2,21 @@ import streamlit as st
 import requests
 import json
 
-# -----------------------------
-# Backend API endpoint
-# -----------------------------
 BACKEND_URL = "http://127.0.0.1:8000/review"
 
-# -----------------------------
-# Streamlit page setup
-# -----------------------------
 st.set_page_config(
     page_title="AI Code Review Agent",
     page_icon="🤖",
     layout="wide"
 )
 
-# -----------------------------
-# Title and description
-# -----------------------------
 st.title("🤖 AI Code Review Agent")
 st.markdown(
     "Analyze your Python code for **style issues**, **complexity**, "
     "**security risks**, and get **AI-powered review feedback**."
 )
 
-# -----------------------------
-# Input section
-# -----------------------------
+
 st.subheader("Paste your Python code here:")
 code_input = st.text_area(
     label="Code Input",
@@ -35,9 +24,7 @@ code_input = st.text_area(
     height=250
 )
 
-# -----------------------------
-# Analyze button
-# -----------------------------
+
 if st.button("🔍 Analyze Code", use_container_width=True):
     if not code_input.strip():
         st.warning("⚠️ Please paste some Python code before analyzing.")
