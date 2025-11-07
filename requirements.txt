@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+streamlit
+google-genai
+python-dotenv
+pylint
+radon
+flake8
